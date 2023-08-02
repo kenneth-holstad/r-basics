@@ -23,3 +23,5 @@ states <- murders$state
 ranks <- rank(murders$population)
 ind <- order(murders$population)
 data.frame(states = states[ind], ranks = ranks[ind])
+
+Note that vectors start at position 1, not 0, in R
