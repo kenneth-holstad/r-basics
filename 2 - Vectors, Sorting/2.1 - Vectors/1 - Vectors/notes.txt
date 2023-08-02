@@ -1,0 +1,26 @@
+Complex data-sets can usually be broken down in vectors
+
+You can create vectors using the concatenate function c()
+If you put characters in those () make sure you use quotes, or else R will look for variables with those names
+
+Note that you can name the elements of a numeric vector and it is still a vector
+ex: codes <- c(italy = 380, canada = 124, egypt = 818)
+Note in that case you don't need the quotes (but it works with them, too)
+
+You could also assign the names separately as such:
+codes <- c(380, 124, 818)
+country <- c("italy","canada","egypt")
+names(codes) <- country
+
+As saw before seq() is another way to produce a vector
+Note that seq() has an optional third argument that specifies step size, defaults to 1
+There is another optional argument, length.out, which you can use to specify length of vector
+Ex: x <- seq(0, 100, length.out = 5) produces 0, 25, 50, 75, 100
+
+Various ways to access particular selections of a vector (called "Subsetting)
+Generally uses [], for example:
+codes[2]
+codes[c(1,3)]
+codes[1:2]
+codes["canada"]
+codes[c("egypt","italy")]

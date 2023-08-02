@@ -1,0 +1,25 @@
+Function sort() sorts a vector in increasing order
+Function order() returns an index which sorts the vector
+
+So to sort states by number of murders, you would want to do this:
+index <- order(murders$total)
+murders$abb[index]
+
+You can use certain functions to find max/min, ex:
+max(murders$total) ## highest number of murders
+which.max(murders$total) ## index number of state with max murders
+murders$state[which.max(murders$total)] ## find state with max murders
+
+i <- which.min(murders$population)
+murders$state[i] ## state with minimum population
+
+Function rank() returns a vector showing the rank of each entry in order
+
+Ranking states by population:
+data.frame(name = murders$state, rank = rank(murders$population))
+
+Ordering states by population:
+states <- murders$state
+ranks <- rank(murders$population)
+ind <- order(murders$population)
+data.frame(states = states[ind], ranks = ranks[ind])

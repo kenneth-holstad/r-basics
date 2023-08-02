@@ -1,0 +1,28 @@
+R will generally try to "coerce" data types to match when data types don't match as expected
+To be more flexible rather than just erroring out
+However, this can cause data types to change unexpectedly which can cause its own confusion
+
+For example, if you assign a vector mixed with numbers and characters, it won't error
+Instead, it will just create a character vector
+
+You can force coercion using certain functions, such as as.character() and as.numeric()
+This is useful in practice because many real-world data sets show numeric columns as character strings
+
+R will create a special value NA when it fails to coerce something
+such as if you try to as.numeric() on a character string
+NA will also often represent nulls
+You can find NA with is.na()
+You can do sum(is.na()) to count the number of nulls in a data set
+You can also use ! operator to only look at not nulls
+
+Example:
+# Create the ind vector
+library(dslabs)
+data(na_example)
+ind <- is.na(na_example)
+
+# This returns NA
+mean(na_example)
+
+# This computes average for not NA
+mean(na_example[!ind])

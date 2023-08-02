@@ -1,5 +1,6 @@
 Function class() will show the data type of an object
-ex: numeric, function
+ex: numeric, function, integer
+Integer you create by putting L after a number (ex: 3L), or by creating vectors of integers such as with seq()
 
 Important data type is "data frames" which is basically a table
 Load data with function data()
