@@ -4,7 +4,7 @@ but they recommend using <-
 example
 a <- 1
 
-variables are a type of object that isa  stored in the workspace
+variables are a type of object that is stored in the workspace. functions are also objects.
 
 ls() function shows the names of objects saved in workspace
-you can call a variable by its name
+you can call a variable by its name or use print(variable_name)

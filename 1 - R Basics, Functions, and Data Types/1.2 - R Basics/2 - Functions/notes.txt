@@ -1,0 +1,28 @@
+We already saw the sqrt() and ls() functions
+Functions generally will not work without parentheses (it will show the code for the function instead)
+Most functions require arguments in the () - often will put variables in here
+
+Access help files for functions with help(function_name) or ?function_name
+This will show both required and optional arguments for functions - or you can see this with args()
+Note that functions will assume default order, but if you want, you can also assign the variables by name
+
+Help functions also work for arithmetic operators 
+help("+") or ?"+"
+That will take you to a page with ALL mathematical operators
+
+You can see pre-built test data-sets with data()
+Other prebuilts exist like pi and inf
+
+Use good naming of variables for readability
+Rules in r - variables must start with a letter and can't contain spaces
+Ofc, you should also avoid making variables that match other pre-defined things in R
+
+Other best practices:
+Write scripts for reusability
+Make comments starting with ##
+
+seq(x,y) makes a list of numbers from x to y
+
+you can use log(x) to calculate log with default base 10
+or log(x,y) to define with custom base
+or log2(x) to calculate base 2, or log10(x)...
