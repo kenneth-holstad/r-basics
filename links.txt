@@ -7,5 +7,6 @@ textbook:
 github: https://github.com/rafalab/dsbook
 
 professor twitter: https://twitter.com/rafalab
+course twitter: https://twitter.com/HXDataScience
 
 Syllabus: https://courses.edx.org/courses/course-v1:HarvardX+PH125.1x+3T2022/faq/
