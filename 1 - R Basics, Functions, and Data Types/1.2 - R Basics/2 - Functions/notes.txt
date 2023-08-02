@@ -26,3 +26,5 @@ seq(x,y) makes a list of numbers from x to y
 you can use log(x) to calculate log with default base 10
 or log(x,y) to define with custom base
 or log2(x) to calculate base 2, or log10(x)...
+
+Finished exercises available at http://rafalab.dfci.harvard.edu/dsbook/r-basics.html#exercises
