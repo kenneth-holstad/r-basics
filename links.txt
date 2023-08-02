@@ -1,0 +1,11 @@
+course: https://learning.edx.org/course/course-v1:HarvardX+PH125.1x+1T2023/home
+
+textbook:
+	HTML: http://rafalab.dfci.harvard.edu/dsbook/
+	PDF: https://leanpub.com/datasciencebook (this doesn't seem to be working)
+
+github: https://github.com/rafalab/dsbook
+
+professor twitter: https://twitter.com/rafalab
+
+Syllabus: https://courses.edx.org/courses/course-v1:HarvardX+PH125.1x+3T2022/faq/

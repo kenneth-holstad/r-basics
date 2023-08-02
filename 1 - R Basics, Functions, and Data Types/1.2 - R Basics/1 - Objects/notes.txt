@@ -1,0 +1,10 @@
+assignment symbols - can use either <- or =
+but they recommend using <-
+
+example
+a <- 1
+
+variables are a type of object that isa  stored in the workspace
+
+ls() function shows the names of objects saved in workspace
+you can call a variable by its name

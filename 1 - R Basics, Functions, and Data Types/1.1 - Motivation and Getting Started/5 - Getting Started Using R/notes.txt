@@ -1,0 +1,14 @@
+R is more interactive than programming languages created by software engineers
+it's open source and many help/community resources are available
+
+many tools need to be added on to the base version of R via packages
+dslabs package is made for this course
+
+once packages are installed, they just need to be loaded into each session using "library" command
+
+To install a package, you use the code install.packages("package_name", dependencies = TRUE).
+
+To load a package, you use the code library(package_name).
+
+If you also want to use a dataset from a package you have loaded, then you use the code data(dataset_name). 
+To see the dataset, you can take the additional step of View(dataset_name).

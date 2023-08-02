@@ -1,0 +1,6 @@
+recommend building a script with all packages you use in case you need to make a fresh install of R
+
+see all packages you have:
+installed.packages()
+
+I put my script in the base folder of this course group

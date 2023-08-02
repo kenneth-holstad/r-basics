@@ -1,0 +1,3 @@
+use keybindings
+cheat sheet is available in RStudio under help
+and I put PDF in this folder
