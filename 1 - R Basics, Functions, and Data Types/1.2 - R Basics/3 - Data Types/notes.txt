@@ -1,0 +1,30 @@
+Function class() will show the data type of an object
+ex: numeric, function
+
+Important data type is "data frames" which is basically a table
+Load data with function data()
+Function str() shows structure of an object
+Function head() shows the top few rows of a dataframe
+
+Function names() shows the column names
+To access variables (columns) in dataframe you use $ (dataframe$columnname)
+Note: the order of rows is preserved if you call a column like this
+
+Calling one variable like above will give you a "vector" (1-D dataframe) of results
+Function length() does what you'd guess
+A vector can have type such as "numeric" or "character" or "logical" (T/F)
+You can see list of relational operators (i.e. ==) with ?Comparison
+
+Function table() takes a vector as an input and returns the frequency of each unique element in the vector
+Ex: number of states per region: table(murders$region)
+
+dataframe[["columnname"]] also accesses a column,
+however if you use [] instead of [[]] it returns a new dataframe rather than accessing the original column
+
+You can use function identical() to validate if two objects are identical
+
+There is another data type called "Factors" which store "categorical" data
+You can assign categories and R uses integer mapping in the background to store this data - making it more efficient
+They recommend avoiding these, although sometimes they may become necessary for certain statistical models
+Function levels() shows the categories there are in a factor
+Function nlevels() shows the number of categories in a factor

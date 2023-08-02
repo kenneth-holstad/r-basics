@@ -22,6 +22,7 @@ Write scripts for reusability
 Make comments starting with ##
 
 seq(x,y) makes a list of numbers from x to y
+x:y does the same thing
 
 you can use log(x) to calculate log with default base 10
 or log(x,y) to define with custom base
