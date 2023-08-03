@@ -1,0 +1,8 @@
+R is not just a powerful data analysis tool but also a programming language
+Although this course focuses on its uses in data analysis, we'll cover a few key programming concepts:
+
+conditional expressions
+for loops
+functions
+
+because these are useful both in programming and data analysis

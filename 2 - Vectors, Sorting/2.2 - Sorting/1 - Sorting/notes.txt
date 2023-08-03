@@ -14,6 +14,7 @@ i <- which.min(murders$population)
 murders$state[i] ## state with minimum population
 
 Function rank() returns a vector showing the rank of each entry in order
+note that you can also do rank(-x) to do rank in descending order instead of ascending
 
 Ranking states by population:
 data.frame(name = murders$state, rank = rank(murders$population))

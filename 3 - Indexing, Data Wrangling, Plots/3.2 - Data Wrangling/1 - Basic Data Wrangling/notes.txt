@@ -1,0 +1,36 @@
+Data Wrangling is the process of manipulating data tables - such as to cleanup data for analysis
+
+Package dplyr contains useful functions for doing this, such as:
+Mutate() - add or change columns
+Filter() - subset rows in a filter
+Select() - select a subset of rows
+
+You can use the pipe operator %>% to send the results of one function into another
+
+To add the murder_rate to murders table:
+murders <- mutate(murders,rate=total/population*100000)
+see that the mutate function knows to look in the table for values rather than you having to define them
+remember that this is all temporary so if you reload this table, it won't be there anymore
+
+To do a simple filter by murder rate:
+filter(murders, rate <= 0.71)
+
+select(table, a,b,c) selects just those columns
+
+nested use:
+filter(select(murders, state, region), region == 'West')
+
+Note that boolean operators, order of operations is NOT, then AND, then OR
+
+To do the exact same thing as the nested case above, but with pipe:
+murders %>% select(state, region) %>% filter(region == 'West')
+
+Other example with rate:
+murders %>% select(state, region, rate) %>% filter(rate <= 0.71)
+
+See that pipe assumes the next function will operate on whatever is piped in
+
+Note that doing a pipe and a filter is basically the same as an & on a nested filter
+
+Advanced single line of pipes example:
+murders %>% mutate(rate = total/population * 100000, rank = rank(-rate)) %>% filter((region == "Northeast" | region == "West") & rate < 1) %>% select(state, rate, rank)

@@ -6,8 +6,10 @@ murders$state[index]
 sum(index) ## calculates number of matches of condition
 
 ! NOT
-| OR
 & AND
+| OR
+
+note that the above is also the order of operations for these operators
 
 So, to match two different conditions at once:
 west <- murders$region == 'West"

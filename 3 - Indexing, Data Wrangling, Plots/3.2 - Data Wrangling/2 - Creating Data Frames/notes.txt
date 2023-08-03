@@ -1,0 +1,14 @@
+Many dplyr functions require data frames
+
+IF YOU ARE USING R VERSION PRIOR TO 4.0,
+by default, data frames convert characters into factors, so you may want to turn this off
+
+Example:
+
+#creating a data frame with stringAsFactors = FALSE
+grades <- data.frame(names = c("John", "Juan", "Jean", "Yao"),
+                     exam_1 = c(95, 80, 90, 85),
+                     exam_2 = c(90, 85, 85, 90),
+                     stringsAsFactors = FALSE)
+
+But I have version 4.3 installed so that is no worry... unless I want to make them into factors, of course

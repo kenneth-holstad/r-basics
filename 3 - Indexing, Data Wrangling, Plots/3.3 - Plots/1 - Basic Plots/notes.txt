@@ -1,0 +1,16 @@
+A strength of R is its flexibility in creating different types of plots,
+while still being relatively easy to do so (although it isn't as powerful as more difficult software like D3)
+
+A few types of plots:
+plot(x,y) - basic scatterplot
+For example you can compare murders by population
+
+hist(x) - histogram ## more on this in future courses
+for example you may want to use this to compare rates with hist(murders$rate)
+
+boxplot(y~x, data = murders) - boxplot
+For example you can compare rates by regions with boxplot(rate~region, data = murders)
+
+image() - color matrix
+
+An entire course in the Data Science specialization is dedicated to visualization
