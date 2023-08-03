@@ -1,0 +1,11 @@
+Most dplyr functions, including summarize, return a data frame
+This can be tricky if you want to use functions on the result
+
+To access values, you can use the access $
+or you can use the pull() function
+
+# using pull to save the number directly
+us_murder_rate <- murders %>%
+  summarize(rate = sum(total) / sum(population) * 10^5) %>%
+  pull(rate)
+us_murder_rate

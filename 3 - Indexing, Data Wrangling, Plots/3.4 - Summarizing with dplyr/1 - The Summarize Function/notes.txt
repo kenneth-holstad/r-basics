@@ -1,0 +1,34 @@
+Summarizing data is important for data analysis
+Examples of summary statistics are mean, median, standard deviation
+The data visualization course will go a lot more into this
+
+Better understanding of data can also come from splitting data into groups, then applying summary functions
+Two new dplyr verbs: group_by and summarize
+
+It seems that summarize just lets you apply calculations to the data-set in a way that produces easily readable code
+It doesn't do much besides letting you pass in values from the data set
+
+Example:
+library(tidyverse)
+library(dplyr)
+library(dslabs)
+data(murders)
+murders <- mutate(murders, rate = total / population * 10^5)
+
+# minimum, median, and maximum murder rate for the states in the West region
+s <- murders %>%
+  filter(region == "West") %>%
+  summarize(minimum = min(rate),
+            median = median(rate),
+            maximum = max(rate))
+s
+
+see how you can do a mean calculation adjusted by population, which you can't do with just mean()
+
+# average rate unadjusted by population size
+mean(murders$rate)
+
+# average rate adjusted by population size
+us_murder_rate <- murders %>%
+  summarize(rate = sum(total) / sum(population) * 10^5)
+us_murder_rate

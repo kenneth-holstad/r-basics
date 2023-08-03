@@ -1,0 +1,24 @@
+Example of general if-statement structure
+# an example showing the general structure of an if-else statement
+a <- 0
+if(a!=0){
+  print(1/a)
+} else{
+  print("No reciprocal for 0.")
+}
+
+ifelse() function is a condensed form of the above
+a <- 0
+ifelse(a > 0, 1/a, NA)
+
+ifelse() is also particularly useful on vectors
+a <- c(0,1,2,-4,5)
+result <- ifelse(a > 0, 1/a, NA)
+
+one useful use case of ifelse() is to replace missing values in a data set
+data(na_example)
+no_nas <- ifelse(is.na(na_example), 0, na_example)
+sum(is.na(no_nas))
+
+any() checks a vector to see if there are any TRUE
+all() checks a vector to see if it is all TRUE

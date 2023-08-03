@@ -1,0 +1,5 @@
+It is not necessary for the use cases shown here, but sometimes it is needed to directly access the data frame being piped
+
+For this you use .
+
+So you can access a particular column like .$rate

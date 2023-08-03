@@ -1,0 +1,22 @@
+group_by() function creates a special type of data frame called a "group data frame"
+
+this will adjust how dplyr functions operate on the object
+
+Conceptually, this creates stacked tables which have the same columns but potentially different numbers of rows
+
+So in this case, the summarize will do the calculation for each group
+library(tidyverse)
+library(dplyr)
+library(dslabs)
+data(murders)
+murders <- mutate(murders, rate = total / population * 10^5)
+
+# group by region
+murders %>% group_by(region)
+
+# summarize after grouping
+murders %>%
+  group_by(region) %>%
+  summarize(median = median(rate))
+
+This is a very common general way to do data analysis

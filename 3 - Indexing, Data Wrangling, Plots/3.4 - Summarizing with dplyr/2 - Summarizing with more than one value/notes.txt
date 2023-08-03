@@ -1,0 +1,30 @@
+Quantile function can return data divided into quantiles however you want
+For example, to divide into min, median, max:
+
+# minimum, median, and maximum murder rate for the states in the West region using quantile
+# note that this returns a vector
+murders %>%
+  filter(region == "West") %>%
+  summarize(range = quantile(rate, c(0, 0.5, 1)))
+
+However, note that this is presented in rows rather than columns
+To do it in columns, you need to make it into a data frame
+
+# returning minimum, median, and maximum as a data frame
+my_quantile <- function(x){
+  r <-  quantile(x, c(0, 0.5, 1))
+  data.frame(minimum = r[1], median = r[2], maximum = r[3]) 
+}
+murders %>% 
+  filter(region == "West") %>%
+  summarize(my_quantile(rate))
+
+To split into n pieces, you can do it either of these ways:
+x <- 1:50
+
+quantile(x,seq(0,1,1/n)
+quantile(x,seq(0,1,length.out = n+1)
+
+Examples:
+quantile(x,seq(0,1,0.1))
+quantile(x,seq(0,1,length.out = 11))

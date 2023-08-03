@@ -1,0 +1,40 @@
+Simple for loop:
+# a very simple for-loop
+for(i in 1:5){
+  print(i)
+}
+
+i isn't special, you can use any variable
+
+how to do the same thing as sum(1:n)
+# creating a function that computes the sum of integers 1 through n
+compute_s_n <- function(n){
+  x <- 1:n
+  sum(x)
+}
+
+To do the same thing without a vector:
+m <- 0
+for (i in 1:n) {
+   m <- m + i
+}
+
+s_n <- vector(length = m) # create an empty vector
+for(n in 1:m){
+  s_n[n] <- compute_s_n(n)
+}
+
+Slightly more complex example:
+# Define a function and store it in `compute_s_n`
+compute_s_n <- function(n){
+  x <- 1:n
+  sum(x^2)
+}
+
+# Create a vector for storing results
+s_n <- vector("numeric", 25)
+
+# write a for-loop to store the results in s_n
+for(n in 1:25){
+s_n[n] <- compute_s_n(n)
+}
