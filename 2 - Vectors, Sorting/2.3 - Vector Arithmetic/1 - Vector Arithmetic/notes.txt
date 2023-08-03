@@ -7,6 +7,9 @@ You can do that for other operators like +,-...
 In addition, if you have vectors of the same length you can add/subtract them from each other,
 or multiply their values, etc.
 
+IMPORTANT NOTE: R "recycles" - that is, if you try to operate between two vectors of different lengths, it will NOT throw an error
+Instead it will repeat the shorter vector into the larger vector
+
 So to calculate murder rate:
 murder_rate <- murders$total / murders$population * 100000
 
