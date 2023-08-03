@@ -1,0 +1,21 @@
+Three useful functions: which, match, %in%
+
+which() provides entries of a logical vector that are true
+index <- which(murder$state = "California")
+although it seems like you would just use match for this particular use case...
+
+match() returns index needed to access matches within the vector
+index <- match(c("New York", "Florida", "Texas"), murders$state)
+
+%in% checks if elements of a first vector are in a second vector
+x %in% y
+
+# to see if Boston, Dakota, and Washington are states
+c("Boston", "Dakota", "Washington") %in% murders$state
+
+example to check for low murder rates:
+low <- murder_rate < 1
+murders$state[which(low)]
+
+to do a "not in":
+!ind %in% murders$state

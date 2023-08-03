@@ -1,0 +1,16 @@
+Logical Operators work with vectors
+Ex: Find murder rates smaller than a certain value
+murder_rate <- murders$total / murders$population * 100000
+index <- murder_rate <= 0.71
+murders$state[index]
+sum(index) ## calculates number of matches of condition
+
+! NOT
+| OR
+& AND
+
+So, to match two different conditions at once:
+west <- murders$region == 'West"
+safe <- murder_rate <= 1
+
+index <- safe & west
