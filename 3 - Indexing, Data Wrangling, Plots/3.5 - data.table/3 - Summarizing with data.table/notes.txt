@@ -1,0 +1,24 @@
+To subset and summarize data, we can use the heights data set
+heights <- setDT(heights)
+
+# summarizing in dplyr
+s <- heights %>%
+  summarize(average = mean(height), standard_deviation = sd(height))
+
+# summarizing in data.table
+s <- heights[, .(average = mean(height), standard_deviation = sd(height))]
+
+
+# subsetting and then summarizing in dplyr
+s <- heights %>%
+  filter(sex == "Female") %>%
+  summarize(average = mean(height), standard_deviation = sd(height))
+
+# subsetting and then summarizing in data.table
+s <- heights[sex == "Female", .(average = mean(height), standard_deviation = sd(height))]
+
+
+you can use the "by" argument to do the equivalent of a group_by()
+
+# grouping then summarizing in data.table
+heights[, .(average = mean(height), standard_deviation = sd(height)), by = sex]

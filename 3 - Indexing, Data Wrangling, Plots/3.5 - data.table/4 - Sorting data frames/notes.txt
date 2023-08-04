@@ -1,0 +1,12 @@
+Sorting is easier with data.table as well
+
+# order by population
+murders[order(population)] |> head()
+
+^ hey look a handy pipe function
+
+# order by population in descending order
+murders[order(population, decreasing = TRUE)]
+
+# order by region and then murder rate
+murders[order(region, rate)]

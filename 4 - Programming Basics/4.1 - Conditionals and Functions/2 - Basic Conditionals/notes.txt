@@ -22,3 +22,7 @@ sum(is.na(no_nas))
 
 any() checks a vector to see if there are any TRUE
 all() checks a vector to see if it is all TRUE
+
+Note that you can also use na.rm to ignore the nulls, examples:
+mean(na_example, na.rm = TRUE)
+sd(na_example, na.rm = TRUE)

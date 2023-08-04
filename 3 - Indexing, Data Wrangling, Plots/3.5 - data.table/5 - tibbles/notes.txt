@@ -1,0 +1,26 @@
+a tbl (called "tibble") is also the default data frame in tidyverse
+
+tbl_df is a special kind of data frame
+group_by function outputs a special kind of tbl, the grouped_df
+
+you can think of tbl's as modern version of data frames
+the print of a tbl is more readable than that of a data frame
+
+You can convert a data frame to a tibble with as_tibble()
+
+Another difference with tbl's is that any subset you take of a tbl is also a tbl
+use the accessor $ if you want to get back something else, like a vector or a character
+
+unlike data frames, tibbles will give a warning if you try to access a column that doesn't exist
+
+tibbles can also contain more complex objects than data frames
+data frames must be vectors of numbers, strings, or boolean
+tibbles can also contain lists, functions, etc.
+
+you can create a tibble with tibble()
+# create a tibble
+tibble(id = c(1, 2, 3), func = c(mean, median, sd))
+
+that tbl grouped_df stores which rows are in which groups, used by summarize and other tidyverse functions
+however many other R functions are not aware of this
+to get around this, you can put those other functions inside a summarize()

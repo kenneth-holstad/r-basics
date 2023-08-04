@@ -17,3 +17,11 @@ murders %>% top_n(10, rate)
 
 # return the top 10 states ranked by murder rate, sorted by murder rate
 murders %>% arrange(desc(rate)) %>% top_n(10)
+
+An example doing some summarizing then arranging:
+library(dplyr)
+library(NHANES)
+data(NHANES)
+
+NHANES %>%
+      filter(Gender == "male") %>% filter(AgeDecade == " 40-49") %>% group_by(Race1) %>% summarize(average = mean(BPSysAve, na.rm = TRUE), standard_deviation = sd(BPSysAve, na.rm = TRUE)) %>% arrange((average))

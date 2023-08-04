@@ -1,0 +1,27 @@
+data.table is another package for data wrangling and analysis
+that is more efficient and better at handling large objects than tidyverse/dplyr
+
+it will have its own approaches to do the same things as mutate, filter, select, group_by, summarize
+
+first note: you have to prepare tables into a data.table object first, or else most things won't work
+
+murders <- setDT
+
+notation is a bit less pretty, to do the same thing as a select, you can do one of these:
+murders[, c("state", "region")] |> head()
+murders[, .(state, region)] |> head()
+
+To add or change columns:
+murders[, rate := total / population * 100000]
+head(murders)
+murders[, ":="(rate = total / population * 100000, rank = rank(population))]
+
+In above, an "update by reference" is used to be more efficient on memory than dplyr
+Note: if you refer one variable to another with data.table, it will NOT create a copy unless you explicitly tell it to
+
+x <- data.table(a = 1)
+y <- x ## y only refers to x
+y <- copy(x) ## now y is a new object
+
+:= is what you use to do a change by reference
+x[,a := 2]

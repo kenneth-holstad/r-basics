@@ -32,3 +32,10 @@ mean(murders$rate)
 us_murder_rate <- murders %>%
   summarize(rate = sum(total) / sum(population) * 10^5)
 us_murder_rate
+
+Example combining some functions with some summarizing:
+library(dplyr)
+library(NHANES)
+data(NHANES)
+## complete this line of code.
+ref <- NHANES %>% filter(AgeDecade == " 20-29" & Gender == "female") %>% summarize(average = mean(BPSysAve, na.rm = TRUE), standard_deviation = sd(BPSysAve, na.rm = TRUE))

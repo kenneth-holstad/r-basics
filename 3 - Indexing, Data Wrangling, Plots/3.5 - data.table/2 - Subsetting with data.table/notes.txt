@@ -1,0 +1,12 @@
+To do the same thing as filter(), the syntax is quite nice with data.table
+
+Because data.table assumes you are dealing with the table and NOT an object in the workspace:
+# subsetting in dplyr
+filter(murders, rate <= 0.7)
+
+# subsetting in data.table
+murders[rate <= 0.7]
+
+thus you can easily combine filter and select in data.table
+# combining filter and select in data.table
+murders[rate <= 0.7, .(state, rate)]
